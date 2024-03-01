@@ -1,16 +1,14 @@
 import sys
 import os
-import dotenv
 import json
 from langchain.llms.bedrock import Bedrock
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
 
-dotenv.load_dotenv()
-
 # Append the parent directory of the backend directory to sys.path
 project_dir_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ""))
 sys.path.append(project_dir_path)
+
 
 # Load model parameters
 def load_model_parameters(file_path):
@@ -29,8 +27,8 @@ def chatbot(model):
     """
     llm = Bedrock(
         credentials_profile_name="default",
-        model_id=model_parameters[model]['id'],
-        model_kwargs=model_parameters[model]['kwargs'],
+        model_id=model_parameters[model]["id"],
+        model_kwargs=model_parameters[model]["kwargs"],
     )
 
     return llm
@@ -56,10 +54,6 @@ def remove_self_conversation(response):
     return response
 
 
-def format_input_text(input_text):
-    return f"{input_text}\nDo not include any self reflection or conversations that was not provided."
-
-
 def conversation(input_text, memory, model):
     """
     Function for Conversation Chain - input prompt + memory
@@ -67,7 +61,6 @@ def conversation(input_text, memory, model):
     llm_data = chatbot(model=model)
     llm_conversation = ConversationChain(llm=llm_data, memory=memory, verbose=False)
 
-    input_text = format_input_text(input_text)
     response = llm_conversation.invoke(input=input_text)
     chat_reply = remove_self_conversation(response["response"])
 

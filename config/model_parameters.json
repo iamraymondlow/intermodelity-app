@@ -1,34 +1,82 @@
 {
     "Amazon Titan Text G1 - Express": {
       "id": "amazon.titan-text-express-v1",
-      "kwargs": {}
+      "kwargs": {
+        "temperature":0.0, 
+        "topP":1, 
+        "maxTokenCount":2000,
+        "stopSequences":["User:"]
+        }
     },
     "Amazon Titan Text G1 - Lite": {
         "id": "amazon.titan-text-lite-v1",
-        "kwargs": {}
+        "kwargs": {
+            "temperature":0.0, 
+            "topP":1, 
+            "maxTokenCount":2000,
+            "stopSequences":["User:"]
+        }
     },
     "AI21 Labs Jurassic-2 Ultra": {
         "id": "ai21.j2-ultra-v1",
-        "kwargs": {}
+        "kwargs": {
+            "temperature":0.0,
+            "topP":1.0,
+            "maxTokens":2000,
+            "presencePenalty":{"scale":0.0},
+            "countPenalty":{"scale":0.0},
+            "frequencyPenalty":{"scale":0.0}
+        }
     },
     "AI21 Labs Jurassic-2 Mid": {
         "id": "ai21.j2-mid-v1",
-        "kwargs": {}
+        "kwargs": {
+            "temperature":0.0,
+            "topP":1.0,
+            "maxTokens":2000,
+            "presencePenalty":{"scale":0.0},
+            "countPenalty":{"scale":0.0},
+            "frequencyPenalty":{"scale":0.0}
+        }
     },
     "Cohere Command": {
         "id": "cohere.command-text-v14",
-        "kwargs": {}
+        "kwargs": {
+            "stream":false,
+            "num_generations":1,
+            "truncate":"NONE",
+            "temperature":0.0,
+            "p":1.0,
+            "k":100,
+            "max_tokens":2000
+        }
     },
     "Cohere Command Light": {
         "id": "cohere.command-light-text-v14",
-        "kwargs": {}
+        "kwargs": {
+            "stream":false,
+            "num_generations":1,
+            "truncate":"NONE",
+            "temperature":0.0,
+            "p":1.0,
+            "k":100,
+            "max_tokens":2000
+        }
     },
     "Meta Llama 2 Chat 70B": {
         "id": "meta.llama2-70b-chat-v1",
-        "kwargs": {}
+        "kwargs": {
+            "temperature":0.0,
+            "top_p":1.0,
+            "max_gen_len":2000
+        }
     },
     "Meta Llama 2 Chat 13B": {
         "id": "meta.llama2-13b-chat-v1",
-        "kwargs": {}
+        "kwargs": {
+            "temperature":0.0,
+            "top_p":1.0,
+            "max_gen_len":2000
+        }
     }
 }
