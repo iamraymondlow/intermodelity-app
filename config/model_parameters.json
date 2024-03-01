@@ -1,0 +1,34 @@
+{
+    "Amazon Titan Text G1 - Express": {
+      "id": "amazon.titan-text-express-v1",
+      "kwargs": {}
+    },
+    "Amazon Titan Text G1 - Lite": {
+        "id": "amazon.titan-text-lite-v1",
+        "kwargs": {}
+    },
+    "AI21 Labs Jurassic-2 Ultra": {
+        "id": "ai21.j2-ultra-v1",
+        "kwargs": {}
+    },
+    "AI21 Labs Jurassic-2 Mid": {
+        "id": "ai21.j2-mid-v1",
+        "kwargs": {}
+    },
+    "Cohere Command": {
+        "id": "cohere.command-text-v14",
+        "kwargs": {}
+    },
+    "Cohere Command Light": {
+        "id": "cohere.command-light-text-v14",
+        "kwargs": {}
+    },
+    "Meta Llama 2 Chat 70B": {
+        "id": "meta.llama2-70b-chat-v1",
+        "kwargs": {}
+    },
+    "Meta Llama 2 Chat 13B": {
+        "id": "meta.llama2-13b-chat-v1",
+        "kwargs": {}
+    }
+}
