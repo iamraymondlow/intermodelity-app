@@ -62,6 +62,6 @@ def conversation(input_text, memory, model):
     llm_conversation = ConversationChain(llm=llm_data, memory=memory, verbose=False)
 
     response = llm_conversation.invoke(input=input_text)
-    chat_reply = remove_self_conversation(response["response"])
+    response = remove_self_conversation(response["response"])
 
-    return chat_reply, llm_conversation, input_text, model
+    return response
