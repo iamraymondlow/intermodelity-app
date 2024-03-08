@@ -1,0 +1,14 @@
+[
+    {
+        "ParameterKey": "NetworkingStack",
+        "ParameterValue": "WebAppNet"
+    },
+    {
+        "ParameterKey": "WebAppPort",
+        "ParameterValue": "WebAppPortValue"
+    },
+    {
+        "ParameterKey": "CertificateArn",
+        "ParameterValue": "CertificateArnValue"
+    }
+]

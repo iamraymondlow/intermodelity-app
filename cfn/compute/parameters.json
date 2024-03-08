@@ -1,0 +1,14 @@
+[
+    {
+        "ParameterKey": "NetworkingStack",
+        "ParameterValue": "WebAppNet"
+    },
+    {
+        "ParameterKey": "ALBStack",
+        "ParameterValue": "WebAppALB"
+    },
+    {
+        "ParameterKey": "UserData",
+        "ParameterValue": "IyEvYmluL2Jhc2gKCgojIERvd25sb2FkIGNvZGVkZXBsb3ktYWdlbnQKZWNobyAiPDw8PDwgY29kZWRlcGxveS1hZ2VudCBzdGFydCA+Pj4+PiIKc3VkbyB5dW0gdXBkYXRlCnN1ZG8geXVtIGluc3RhbGwgcnVieSAteQpzdWRvIHl1bSBpbnN0YWxsIHdnZXQgLXkKY2QgL2hvbWUvZWMyLXVzZXIKd2dldCBodHRwczovL2F3cy1jb2RlZGVwbG95LXVzLWVhc3QtMS5zMy51cy1lYXN0LTEuYW1hem9uYXdzLmNvbS9sYXRlc3QvaW5zdGFsbApjaG1vZCAreCAuL2luc3RhbGwKCiMgaW5zdGFsbCAmIHN0YXJ0IGNvZGVkZXBsb3ktYWdlbnQKc3VkbyAuL2luc3RhbGwgYXV0bwpzdWRvIHNlcnZpY2UgY29kZWRlcGxveS1hZ2VudCBzdGFydAplY2hvICI8PDw8PCBjb2RlZGVwbG95LWFnZW50IGZpbmlzaCA+Pj4+PiIKCiMgaW5zdGFsbCAmIHN0YXJ0IGRvY2tlcgplY2hvICI8PDw8PCBkb2NrZXIgc3RhcnQgPj4+Pj4iCnN1ZG8geXVtIHNlYXJjaCBkb2NrZXIKc3VkbyB5dW0gaW5zdGFsbCBkb2NrZXIgLXkKc3VkbyBuZXdncnAgZG9ja2VyCnN1ZG8gdXNlcm1vZCAtYSAtRyBkb2NrZXIgZWMyLXVzZXIKc3VkbyBzeXN0ZW1jdGwgZW5hYmxlIGRvY2tlci5zZXJ2aWNlCnN1ZG8gc3lzdGVtY3RsIHN0YXJ0IGRvY2tlci5zZXJ2aWNlCmVjaG8gIjw8PDw8IGRvY2tlciBmaW5pc2ggPj4+Pj4iCg=="
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "ParameterKey": "GitHubConnectionArn",
+        "ParameterValue": "GitHubConnectionArnValue"
+    },
+    {
+        "ParameterKey": "GitHubRepo",
+        "ParameterValue": "GitHubUser/RepoName"
+    },
+    {
+        "ParameterKey": "GitHubSourceRepo",
+        "ParameterValue": "https://YourRepoUrl"
+    },
+    {
+        "ParameterKey": "GitHubBranch",
+        "ParameterValue": "main"
+    },
+    {
+        "ParameterKey": "ArtifactBucketName",
+        "ParameterValue": "ArtifactBucketNameValue"
+    }
+]

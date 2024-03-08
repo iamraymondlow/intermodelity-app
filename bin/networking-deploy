@@ -1,0 +1,18 @@
+#! /bin/bash
+
+PARAMETERS="../cfn/networking/parameters.json"
+CFN_FILE="../cfn/networking/template.yaml"
+BUCKET="" # Cloudformation bucket
+REGION="us-east-1" # replace with the relevant region
+STACK_NAME="WebAppNet"
+
+# deploy
+aws cloudformation deploy \
+  --stack-name $STACK_NAME \
+  --s3-bucket $BUCKET \
+  --s3-prefix WebAppNet \
+  --region $REGION \
+  --template-file "$CFN_FILE" \
+  --no-execute-changeset \
+  --tags group=WepApp-TL\
+  --capabilities CAPABILITY_NAMED_IAM

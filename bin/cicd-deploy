@@ -1,0 +1,30 @@
+#! /usr/bin/env bash
+
+CFN_FILE="cfn/cicd/template.yaml"
+PACKAGED_FILE="../cfn/tmp/packaged-template.yaml"
+PARAMETERS=$(jq -r '.[] | "\(.ParameterKey)=\(.ParameterValue)"' ../cfn/cicd/parameters.json | tr '\n' ' ')
+
+BUCKET="" # Cloudformation bucket
+REGION="us-east-1" # replace with the relevant region
+STACK_NAME="WebAppCICD"
+
+# package
+echo ">>>> packaging CFN to S3 <<<<"
+aws cloudformation package \
+  --template-file $CFN_FILE \
+  --s3-bucket $BUCKET \
+  --s3-prefix cicd-package \
+  --region $REGION \
+  --output-template-file "$PACKAGED_FILE"
+
+# deploy
+aws cloudformation deploy \
+  --stack-name $STACK_NAME \
+  --s3-bucket $BUCKET \
+  --s3-prefix cicd \
+  --region $REGION \
+  --template-file "$PACKAGED_FILE" \
+  --no-execute-changeset \
+  --tags group=WebApp-cicd \
+  --parameter-overrides $PARAMETERS \
+  --capabilities CAPABILITY_NAMED_IAM
