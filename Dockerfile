@@ -1,7 +1,7 @@
 # app/Dockerfile
 
 # use the ECR repo base-image link
-FROM [YourAccountID].dkr.ecr.[YourRegion].amazonaws.com/[ECR-repo-base-image]:3.10-slim-buster
+FROM 858486579140.dkr.ecr.us-east-1.amazonaws.com/webapp-base-image:3.10-slim-buster
 
 WORKDIR /app
 
