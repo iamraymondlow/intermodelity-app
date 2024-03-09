@@ -2,8 +2,8 @@
 
 # Env
 # Enter you AWS account ID and region
-AWS_DEFAULT_REGION=''
-AWS_ACCOUNT_ID=''
+AWS_DEFAULT_REGION='us-east-1'
+AWS_ACCOUNT_ID='858486579140'
 
 # ECR login
 aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com"

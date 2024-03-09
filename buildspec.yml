@@ -24,14 +24,14 @@ phases:
 env:
   variables:
     # Replace the value with your AWS account ID
-    AWS_ACCOUNT_ID: 123456789012
+    AWS_ACCOUNT_ID: 858486579140
     # Replace the value with your AWS region - eg: us-east-1
     AWS_DEFAULT_REGION: us-east-1
     # Replace the value with the container name - eg: webapp
-    CONTAINER_NAME: webapp
+    CONTAINER_NAME: intermodelity-app
     IMAGE_URL: $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
     # Replace the value with the container image name:tag - eg: webapp:latest
-    REPO_NAME: webapp:latest
+    REPO_NAME: intermodelity-app:latest
 artifacts:
   base-directory: $CODEBUILD_SRC_DIR
   files:

@@ -4,9 +4,9 @@
 # Replace the value with your AWS region - eg: us-east-1
 export AWS_DEFAULT_REGION=us-east-1
 # Replace the value with your AWS account ID
-export AWS_ACCOUNT_ID=123456789123
+export AWS_ACCOUNT_ID=858486579140
 # Replace the value with the container name - eg: webapp
-export CONTAINER_NAME=WebApp # 
+export CONTAINER_NAME=intermodelity-app # 
 
 
 # Download codedeploy-agent

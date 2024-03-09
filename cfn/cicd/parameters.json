@@ -1,15 +1,15 @@
 [
     {
         "ParameterKey": "GitHubConnectionArn",
-        "ParameterValue": "GitHubConnectionArnValue"
+        "ParameterValue": "arn:aws:codestar-connections:us-east-1:858486579140:connection/a38a1ead-1cd7-4522-a7d4-e7f3d72b79a5"
     },
     {
         "ParameterKey": "GitHubRepo",
-        "ParameterValue": "GitHubUser/RepoName"
+        "ParameterValue": "iamraymondlow/intermodelity-app"
     },
     {
         "ParameterKey": "GitHubSourceRepo",
-        "ParameterValue": "https://YourRepoUrl"
+        "ParameterValue": "https://github.com/iamraymondlow/intermodelity-app.git"
     },
     {
         "ParameterKey": "GitHubBranch",
@@ -17,6 +17,6 @@
     },
     {
         "ParameterKey": "ArtifactBucketName",
-        "ParameterValue": "ArtifactBucketNameValue"
+        "ParameterValue": "codepipeline-intermodelity-app-20240308171415"
     }
 ]

@@ -1,11 +1,11 @@
 [
     {
         "ParameterKey": "DomainName",
-        "ParameterValue": "YourDomainName.com"
+        "ParameterValue": "intermodelity.com"
     },
     {
         "ParameterKey": "HostedZoneRecord",
-        "ParameterValue": "webapp"
+        "ParameterValue": "intermodelity.com"
     },
     {
         "ParameterKey": "ALBStack",
@@ -13,14 +13,14 @@
     },
     {
         "ParameterKey": "DomainHostedZoneId",
-        "ParameterValue": "YourHostedZoneId"
+        "ParameterValue": "Z01946562EQCUFQL5MOWP"
     },
     {
         "ParameterKey": "CustomDomainName",
-        "ParameterValue": "webapp.YourDomainName.com"
+        "ParameterValue": ""
     },
     {
         "ParameterKey": "CertificateArn",
-        "ParameterValue": "CertificateArnValue"
+        "ParameterValue": "arn:aws:acm:us-east-1:858486579140:certificate/da7d7a41-fe68-4586-8a41-b6def7122038"
     }
 ]

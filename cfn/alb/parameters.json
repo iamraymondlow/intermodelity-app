@@ -5,10 +5,10 @@
     },
     {
         "ParameterKey": "WebAppPort",
-        "ParameterValue": "WebAppPortValue"
+        "ParameterValue": 8501
     },
     {
         "ParameterKey": "CertificateArn",
-        "ParameterValue": "CertificateArnValue"
+        "ParameterValue": "arn:aws:acm:us-east-1:858486579140:certificate/da7d7a41-fe68-4586-8a41-b6def7122038"
     }
 ]
