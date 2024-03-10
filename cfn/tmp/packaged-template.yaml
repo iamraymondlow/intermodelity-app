@@ -20,7 +20,7 @@ Resources:
   CodeBuildImageStack:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: https://s3.us-east-1.amazonaws.com/intermodelity-app-cfn-artifact-20240308172959/cicd-package/32f1951cc20039dcdb3ff6f0c170da7b.template
+      TemplateURL: https://s3.us-east-1.amazonaws.com/intermodelity-app-cfn-artifact-20240308172959/cicd-package/ec4c71794e04c800d388b66e321c77eb.template
       Parameters:
         GitHubSourceRepo:
           Ref: GitHubSourceRepo

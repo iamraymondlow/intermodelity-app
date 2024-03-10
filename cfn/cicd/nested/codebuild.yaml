@@ -87,6 +87,12 @@ Resources:
                   - s3:ListBucket
                 Effect: Allow
                 Resource: !Sub arn:aws:s3:::${ArtifactBucketName}
+  CodeBuildSourceCredential:
+    Type: AWS::CodeBuild::SourceCredential
+    Properties:
+      AuthType: PERSONAL_ACCESS_TOKEN
+      ServerType: GITHUB
+      Token: '{{resolve:secretsmanager:github-personal-access-token:SecretString:github-personal-access-token}}'
   CodeBuildProject:
     Type: AWS::CodeBuild::Project
     Properties:
@@ -109,6 +115,7 @@ Resources:
         ReportBuildStatus: true
         SourceIdentifier: !Ref GitHubBranchName
         Auth:
+          Resource: !Ref CodeBuildSourceCredential
           Type: OAUTH
 Outputs:
   CodeBuildProjectName:

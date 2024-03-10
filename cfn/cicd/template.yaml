@@ -19,17 +19,11 @@ Parameters:
     Description: GitHub branch name
   ArtifactBucketName:
     Type: String
-  CodeBuildYAMLPath:
-    Type: String
-    Description: Directory path to code build YAML file
-  CodeDeployYAMLPath:
-    Type: String
-    Description: Directory path to code deploy YAML file
 Resources:
   CodeBuildImageStack:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: !Ref CodeBuildYAMLPath
+      TemplateURL: nested/codebuild.yaml
       Parameters:
         GitHubSourceRepo: !Ref GitHubSourceRepo
         GitHubBranchName: !Ref GitHubBranch
@@ -37,7 +31,7 @@ Resources:
   CodeDeployStack:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: !Ref CodeDeployYAMLPath
+      TemplateURL: nested/codedeploy.yaml
   CodePipelineRole:
     Type: AWS::IAM::Role
     Properties:
