@@ -18,5 +18,13 @@
     {
         "ParameterKey": "ArtifactBucketName",
         "ParameterValue": "codepipeline-intermodelity-app-20240308171415"
+    },
+    {
+        "ParameterKey": "CodeBuildYAMLPath",
+        "ParameterValue": "nested/codebuild.yaml"
+    },
+    {
+        "ParameterKey": "CodeDeployYAMLPath",
+        "ParameterValue": "nested/codedeploy.yaml"
     }
 ]
