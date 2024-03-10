@@ -15,9 +15,6 @@ Parameters:
   UserData:
     Type: String
     Description: Base64 encoded UserData script
-  MyIP:
-    Type: String
-    Description: Public IP address for SSH access
   WebAppPort:
     Type: Number
     Description: Port number on which the WebApp is running
