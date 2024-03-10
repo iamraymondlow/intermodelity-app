@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-CFN_FILE="cfn/cicd/template.yaml"
+CFN_FILE="../cfn/cicd/template.yaml"
 PACKAGED_FILE="../cfn/tmp/packaged-template.yaml"
 PARAMETERS=$(jq -r '.[] | "\(.ParameterKey)=\(.ParameterValue)"' ../cfn/cicd/parameters.json | tr '\n' ' ')
 
