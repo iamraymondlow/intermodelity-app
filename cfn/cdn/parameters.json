@@ -17,7 +17,7 @@
     },
     {
         "ParameterKey": "CustomDomainName",
-        "ParameterValue": ""
+        "ParameterValue": "intermodelity.com"
     },
     {
         "ParameterKey": "CertificateArn",
