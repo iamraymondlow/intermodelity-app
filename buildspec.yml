@@ -7,7 +7,7 @@ phases:
       - echo "cd into $CODEBUILD_SRC_DIR/"
       - cd $CODEBUILD_SRC_DIR
       - echo $(ls)
-      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $IMAGE_URL
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin "$IMAGE_URL"
   build:
     commands:
       - echo Build started on `date`
