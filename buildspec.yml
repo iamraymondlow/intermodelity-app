@@ -1,6 +1,6 @@
 # Buildspec runs in the build stage of your pipeline.
 # Replace the values as needed
-version: 0.0
+version: 0.2
 phases:
   pre_build:
     commands:
