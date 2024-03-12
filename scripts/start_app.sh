@@ -13,4 +13,4 @@ aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --usernam
 docker pull $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_NAME:latest
 
 # run the container
-docker run -d -p 8501:8501 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_NAME:latest
+docker run -d -p 8501:8501 -v $HOME/.aws/credentials:/home/app/.aws/credentials:ro $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_NAME:latest
