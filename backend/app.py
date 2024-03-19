@@ -1,13 +1,16 @@
 import sys
 import os
-import json
-from langchain.llms.bedrock import Bedrock
-from langchain.memory import ConversationBufferMemory
-from langchain.chains import ConversationChain
 
 # Append the parent directory of the backend directory to sys.path
 project_dir_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ""))
 sys.path.append(project_dir_path)
+
+import json
+from backend.bedrock_class import BedrockClass
+from langchain.llms.bedrock import Bedrock
+from langchain.memory import ConversationBufferMemory
+from langchain.chains import ConversationChain
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 
 
 # Load model parameters
@@ -26,9 +29,11 @@ def chatbot(model):
     Function for Bedrock foundation model
     """
     llm = Bedrock(
-        credentials_profile_name="default",
+        client=BedrockClass.get_bedrock_runtime_client(),
         model_id=model_parameters[model]["id"],
         model_kwargs=model_parameters[model]["kwargs"],
+        streaming=True,
+        callbacks=[StreamingStdOutCallbackHandler()],
     )
 
     return llm
@@ -59,7 +64,7 @@ def conversation(input_text, memory, model):
     Function for Conversation Chain - input prompt + memory
     """
     llm_data = chatbot(model=model)
-    llm_conversation = ConversationChain(llm=llm_data, memory=memory, verbose=False)
+    llm_conversation = ConversationChain(llm=llm_data, memory=memory, verbose=True)
 
     response = llm_conversation.invoke(input=input_text)
     response = remove_self_conversation(response["response"])
