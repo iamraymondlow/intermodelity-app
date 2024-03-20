@@ -13,12 +13,12 @@ def getParameter():
     The parameter's value is returned.
     """
     # Create the SSM Client
-    ssm = boto3.client("ssm")
+    ssm = boto3.client("ssm", os.environ["AWS_DEFAULT_REGION"])
 
     # Get the requested parameter
-    AWS_REGION = ssm.get_parameters(Names="REGION", WithDecryption=True)["Parameters"]["Value"]
-    AWS_ACCESS_KEY = ssm.get_parameters(Names="ACCESS_KEY", WithDecryption=True)["Parameters"]["Value"]
-    AWS_SECRET_ACCESS_KEY = ssm.get_parameters(Names="SECRET_ACCESS_KEY", WithDecryption=True)["Parameters"]["Value"]
+    AWS_REGION = ssm.get_parameter(Name="DEFAULT_REGION", WithDecryption=True)["Parameter"]["Value"]
+    AWS_ACCESS_KEY = ssm.get_parameter(Name="ACCESS_KEY_ID", WithDecryption=True)["Parameter"]["Value"]
+    AWS_SECRET_ACCESS_KEY = ssm.get_parameter(Name="SECRET_ACCESS_KEY", WithDecryption=True)["Parameter"]["Value"]
 
     return AWS_REGION, AWS_ACCESS_KEY, AWS_SECRET_ACCESS_KEY
 
@@ -26,8 +26,8 @@ def getParameter():
 try:
     AWS_REGION, AWS_ACCESS_KEY, AWS_SECRET_ACCESS_KEY = getParameter()
 except:
-    AWS_REGION = os.environ["AWS_REGION"]
-    AWS_ACCESS_KEY = os.environ["AWS_ACCESS_KEY"]
+    AWS_REGION = os.environ["AWS_DEFAULT_REGION"]
+    AWS_ACCESS_KEY = os.environ["AWS_ACCESS_KEY_ID"]
     AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
 
 
