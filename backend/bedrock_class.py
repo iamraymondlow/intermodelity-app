@@ -13,7 +13,7 @@ def getParameter():
     The parameter's value is returned.
     """
     # Create the SSM Client
-    ssm = boto3.client("ssm", os.environ["AWS_DEFAULT_REGION"])
+    ssm = boto3.client("ssm", region_name=os.environ["AWS_DEFAULT_REGION"])
 
     # Get the requested parameter
     AWS_REGION = ssm.get_parameter(Name="DEFAULT_REGION", WithDecryption=True)["Parameter"]["Value"]
